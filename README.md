@@ -20,21 +20,21 @@ You will need to provide your Fabric ID and TLS certs. By default the ID cert is
 The TLS certs are optional and are only required if the peer is using TLS.
 
 ## Options
-Depending on your preferences you can simply edit "```inspect.ts```" to hard code your settings into the ```options``` structure or provide them on the command line. 
+Depending on your preferences you can simply edit ```inspect.ts``` to hard code your settings into the ```options``` structure or provide them on the command line. 
 
 The currently supported options are:
 
-```--wallet_path``` : The path to the user ID cert. Default to '```../creds/id```'
+```--wallet_path``` : The path to the user ID cert. Default to ```../creds/id``` and currently must be a relative path
 
-```--user_id``` : The name of the user. Default to '```admin```'
+```--user_id``` : The name of the user. Default to ```admin```
 
-```--channel``` : The name of the channel to connect to. Defaults to '```mychannel```'
+```--channel``` : The name of the channel to connect to. Defaults to ```mychannel```
 
-```--peer_url``` : The address of the peer. Defaults to '```grpc://localhost:7051```'
+```--peer_url``` : The address of the peer. Defaults to ```grpc://localhost:7051```
 
-```--tls_cert``` : The location of the TLS certs. Defaults to '```../creds/tls/peer.cert```'. If the the option is not given and the default cert does not exist then it assumes that TLS is not being used.
+```--tls_cert``` : The location of the TLS certs. Defaults to ```../creds/tls/peer.cert```. If the the option is not given and the default cert does not exist then it assumes that TLS is not being used.  Currently this must be a relative path
 
-```output``` : The location of the output JSON file. Defaults to '```../output.json```'
+```--output``` : The location of the output JSON file. Defaults to ```../output.json```
 
 ## Examples
 

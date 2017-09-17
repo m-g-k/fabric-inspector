@@ -1,8 +1,8 @@
 {
-  "name": "fabric-query",
+  "name": "fabric-inspector",
   "version": "0.1.5",
   "description": "Hyperledger Fabric Inspector",
-  "main": "./out/queryNetwork.js",
+  "main": "./out/inspect.js",
   "scripts": {
     "build": "tsc -p ./",
     "compile": "tsc -watch -p ./",

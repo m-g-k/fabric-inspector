@@ -71,6 +71,12 @@ async function inspectChain() {
 
   console.log("Associating user '" + options.user_id + "' with application");
   client.setStateStore(wallet);
+  var crypto_suite = hfc.newCryptoSuite();
+	// use the same location for the state store (where the users' certificate are kept)
+	// and the crypto store (where the users' keys are kept)
+	var crypto_store = hfc.newCryptoKeyStore({path: options.wallet_path});
+	crypto_suite.setCryptoKeyStore(crypto_store);
+	client.setCryptoSuite(crypto_suite);
   var user = await client.getUserContext(options.user_id, true);
 
   console.log("Checking user is enrolled");

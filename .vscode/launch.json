@@ -8,8 +8,10 @@
       "type": "node",
       "request": "launch",
       "args": [
-        "--channel", "myfabcar", 
-        "--peer_url", "grpc://myremotehost:7051"
+        "--channel", "mychannel", 
+        "--peer_url", "grpc://localhost:7051",
+        "--wallet_path", "../../fabcar/hfc-key-store",
+        "--user_id", "user1"
       ],
       "name": "Launch Inspector",
       "program": "${workspaceRoot}/out/inspect.js",
